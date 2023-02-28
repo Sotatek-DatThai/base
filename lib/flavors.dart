@@ -16,11 +16,11 @@ class F {
   static String get env {
     switch (appFlavor) {
       case Flavor.A:
-        return envA.name;
+        return flavorA.name;
       case Flavor.B:
-        return envB.name;
+        return flavorB.name;
       case Flavor.C:
-        return envC.name;
+        return flavorC.name;
     }
   }
 

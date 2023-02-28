@@ -1,3 +1,6 @@
+Base on Clean Architecture
+
+Each Flavor will have
 
 ```
 flutter pub run build_runner build --delete-conflicting-outputs
@@ -8,7 +11,6 @@ spider build
 
 xcrun simctl erase all
 ```
-
 
 ```
 

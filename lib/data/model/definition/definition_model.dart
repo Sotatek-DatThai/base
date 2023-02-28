@@ -8,7 +8,7 @@ part 'definition_model.g.dart';
 class DefinitionModel {
   final String word;
   final String phonetic;
-  final String origin;
+  final String? origin;
 
   DefinitionModel(
     this.word,

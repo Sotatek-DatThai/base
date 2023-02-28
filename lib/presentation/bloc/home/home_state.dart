@@ -7,15 +7,15 @@ class HomeState with _$HomeState {
   const factory HomeState.loading() = HomeLoading;
 
   const factory HomeState.appALoaded({
-    required DefinitionEntity enDefinitionEntity,
+    required List<DefinitionEntity> enDefinitionEntities,
   }) = HomeALoaded;
 
   const factory HomeState.appBLoaded({
-    required EmojiEntity emojiEntity,
+    required UserEntity userEntity,
   }) = HomeBLoaded;
 
   const factory HomeState.appCLoaded({
-    required UserEntity userEntity,
+    required String userName,
   }) = HomeCLoaded;
 
   const factory HomeState.error(String message) = HomeError;

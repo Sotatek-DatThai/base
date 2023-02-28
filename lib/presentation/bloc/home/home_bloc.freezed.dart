@@ -18,44 +18,50 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() randomEmoji,
     required TResult Function() randomUser,
+    required TResult Function() getStoredUserName,
+    required TResult Function(String name) setUserName,
     required TResult Function(String word) getEnDefinition,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? randomEmoji,
     TResult? Function()? randomUser,
+    TResult? Function()? getStoredUserName,
+    TResult? Function(String name)? setUserName,
     TResult? Function(String word)? getEnDefinition,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? randomEmoji,
     TResult Function()? randomUser,
+    TResult Function()? getStoredUserName,
+    TResult Function(String name)? setUserName,
     TResult Function(String word)? getEnDefinition,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_RandomEmoji value) randomEmoji,
     required TResult Function(_RandomUser value) randomUser,
+    required TResult Function(_GetStoredUserName value) getStoredUserName,
+    required TResult Function(_SetUserName value) setUserName,
     required TResult Function(_EnDefinition value) getEnDefinition,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RandomEmoji value)? randomEmoji,
     TResult? Function(_RandomUser value)? randomUser,
+    TResult? Function(_GetStoredUserName value)? getStoredUserName,
+    TResult? Function(_SetUserName value)? setUserName,
     TResult? Function(_EnDefinition value)? getEnDefinition,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RandomEmoji value)? randomEmoji,
     TResult Function(_RandomUser value)? randomUser,
+    TResult Function(_GetStoredUserName value)? getStoredUserName,
+    TResult Function(_SetUserName value)? setUserName,
     TResult Function(_EnDefinition value)? getEnDefinition,
     required TResult orElse(),
   }) =>
@@ -77,114 +83,6 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$_RandomEmojiCopyWith<$Res> {
-  factory _$$_RandomEmojiCopyWith(
-          _$_RandomEmoji value, $Res Function(_$_RandomEmoji) then) =
-      __$$_RandomEmojiCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$_RandomEmojiCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$_RandomEmoji>
-    implements _$$_RandomEmojiCopyWith<$Res> {
-  __$$_RandomEmojiCopyWithImpl(
-      _$_RandomEmoji _value, $Res Function(_$_RandomEmoji) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$_RandomEmoji implements _RandomEmoji {
-  const _$_RandomEmoji();
-
-  @override
-  String toString() {
-    return 'HomeEvent.randomEmoji()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_RandomEmoji);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() randomEmoji,
-    required TResult Function() randomUser,
-    required TResult Function(String word) getEnDefinition,
-  }) {
-    return randomEmoji();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? randomEmoji,
-    TResult? Function()? randomUser,
-    TResult? Function(String word)? getEnDefinition,
-  }) {
-    return randomEmoji?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? randomEmoji,
-    TResult Function()? randomUser,
-    TResult Function(String word)? getEnDefinition,
-    required TResult orElse(),
-  }) {
-    if (randomEmoji != null) {
-      return randomEmoji();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_RandomEmoji value) randomEmoji,
-    required TResult Function(_RandomUser value) randomUser,
-    required TResult Function(_EnDefinition value) getEnDefinition,
-  }) {
-    return randomEmoji(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RandomEmoji value)? randomEmoji,
-    TResult? Function(_RandomUser value)? randomUser,
-    TResult? Function(_EnDefinition value)? getEnDefinition,
-  }) {
-    return randomEmoji?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RandomEmoji value)? randomEmoji,
-    TResult Function(_RandomUser value)? randomUser,
-    TResult Function(_EnDefinition value)? getEnDefinition,
-    required TResult orElse(),
-  }) {
-    if (randomEmoji != null) {
-      return randomEmoji(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _RandomEmoji implements HomeEvent {
-  const factory _RandomEmoji() = _$_RandomEmoji;
 }
 
 /// @nodoc
@@ -225,8 +123,9 @@ class _$_RandomUser implements _RandomUser {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() randomEmoji,
     required TResult Function() randomUser,
+    required TResult Function() getStoredUserName,
+    required TResult Function(String name) setUserName,
     required TResult Function(String word) getEnDefinition,
   }) {
     return randomUser();
@@ -235,8 +134,9 @@ class _$_RandomUser implements _RandomUser {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? randomEmoji,
     TResult? Function()? randomUser,
+    TResult? Function()? getStoredUserName,
+    TResult? Function(String name)? setUserName,
     TResult? Function(String word)? getEnDefinition,
   }) {
     return randomUser?.call();
@@ -245,8 +145,9 @@ class _$_RandomUser implements _RandomUser {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? randomEmoji,
     TResult Function()? randomUser,
+    TResult Function()? getStoredUserName,
+    TResult Function(String name)? setUserName,
     TResult Function(String word)? getEnDefinition,
     required TResult orElse(),
   }) {
@@ -259,8 +160,9 @@ class _$_RandomUser implements _RandomUser {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_RandomEmoji value) randomEmoji,
     required TResult Function(_RandomUser value) randomUser,
+    required TResult Function(_GetStoredUserName value) getStoredUserName,
+    required TResult Function(_SetUserName value) setUserName,
     required TResult Function(_EnDefinition value) getEnDefinition,
   }) {
     return randomUser(this);
@@ -269,8 +171,9 @@ class _$_RandomUser implements _RandomUser {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RandomEmoji value)? randomEmoji,
     TResult? Function(_RandomUser value)? randomUser,
+    TResult? Function(_GetStoredUserName value)? getStoredUserName,
+    TResult? Function(_SetUserName value)? setUserName,
     TResult? Function(_EnDefinition value)? getEnDefinition,
   }) {
     return randomUser?.call(this);
@@ -279,8 +182,9 @@ class _$_RandomUser implements _RandomUser {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RandomEmoji value)? randomEmoji,
     TResult Function(_RandomUser value)? randomUser,
+    TResult Function(_GetStoredUserName value)? getStoredUserName,
+    TResult Function(_SetUserName value)? setUserName,
     TResult Function(_EnDefinition value)? getEnDefinition,
     required TResult orElse(),
   }) {
@@ -293,6 +197,265 @@ class _$_RandomUser implements _RandomUser {
 
 abstract class _RandomUser implements HomeEvent {
   const factory _RandomUser() = _$_RandomUser;
+}
+
+/// @nodoc
+abstract class _$$_GetStoredUserNameCopyWith<$Res> {
+  factory _$$_GetStoredUserNameCopyWith(_$_GetStoredUserName value,
+          $Res Function(_$_GetStoredUserName) then) =
+      __$$_GetStoredUserNameCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetStoredUserNameCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_GetStoredUserName>
+    implements _$$_GetStoredUserNameCopyWith<$Res> {
+  __$$_GetStoredUserNameCopyWithImpl(
+      _$_GetStoredUserName _value, $Res Function(_$_GetStoredUserName) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GetStoredUserName implements _GetStoredUserName {
+  const _$_GetStoredUserName();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getStoredUserName()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GetStoredUserName);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() randomUser,
+    required TResult Function() getStoredUserName,
+    required TResult Function(String name) setUserName,
+    required TResult Function(String word) getEnDefinition,
+  }) {
+    return getStoredUserName();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? randomUser,
+    TResult? Function()? getStoredUserName,
+    TResult? Function(String name)? setUserName,
+    TResult? Function(String word)? getEnDefinition,
+  }) {
+    return getStoredUserName?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? randomUser,
+    TResult Function()? getStoredUserName,
+    TResult Function(String name)? setUserName,
+    TResult Function(String word)? getEnDefinition,
+    required TResult orElse(),
+  }) {
+    if (getStoredUserName != null) {
+      return getStoredUserName();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_RandomUser value) randomUser,
+    required TResult Function(_GetStoredUserName value) getStoredUserName,
+    required TResult Function(_SetUserName value) setUserName,
+    required TResult Function(_EnDefinition value) getEnDefinition,
+  }) {
+    return getStoredUserName(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_RandomUser value)? randomUser,
+    TResult? Function(_GetStoredUserName value)? getStoredUserName,
+    TResult? Function(_SetUserName value)? setUserName,
+    TResult? Function(_EnDefinition value)? getEnDefinition,
+  }) {
+    return getStoredUserName?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_RandomUser value)? randomUser,
+    TResult Function(_GetStoredUserName value)? getStoredUserName,
+    TResult Function(_SetUserName value)? setUserName,
+    TResult Function(_EnDefinition value)? getEnDefinition,
+    required TResult orElse(),
+  }) {
+    if (getStoredUserName != null) {
+      return getStoredUserName(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetStoredUserName implements HomeEvent {
+  const factory _GetStoredUserName() = _$_GetStoredUserName;
+}
+
+/// @nodoc
+abstract class _$$_SetUserNameCopyWith<$Res> {
+  factory _$$_SetUserNameCopyWith(
+          _$_SetUserName value, $Res Function(_$_SetUserName) then) =
+      __$$_SetUserNameCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String name});
+}
+
+/// @nodoc
+class __$$_SetUserNameCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_SetUserName>
+    implements _$$_SetUserNameCopyWith<$Res> {
+  __$$_SetUserNameCopyWithImpl(
+      _$_SetUserName _value, $Res Function(_$_SetUserName) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+  }) {
+    return _then(_$_SetUserName(
+      null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_SetUserName implements _SetUserName {
+  const _$_SetUserName(this.name);
+
+  @override
+  final String name;
+
+  @override
+  String toString() {
+    return 'HomeEvent.setUserName(name: $name)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_SetUserName &&
+            (identical(other.name, name) || other.name == name));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, name);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SetUserNameCopyWith<_$_SetUserName> get copyWith =>
+      __$$_SetUserNameCopyWithImpl<_$_SetUserName>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() randomUser,
+    required TResult Function() getStoredUserName,
+    required TResult Function(String name) setUserName,
+    required TResult Function(String word) getEnDefinition,
+  }) {
+    return setUserName(name);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? randomUser,
+    TResult? Function()? getStoredUserName,
+    TResult? Function(String name)? setUserName,
+    TResult? Function(String word)? getEnDefinition,
+  }) {
+    return setUserName?.call(name);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? randomUser,
+    TResult Function()? getStoredUserName,
+    TResult Function(String name)? setUserName,
+    TResult Function(String word)? getEnDefinition,
+    required TResult orElse(),
+  }) {
+    if (setUserName != null) {
+      return setUserName(name);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_RandomUser value) randomUser,
+    required TResult Function(_GetStoredUserName value) getStoredUserName,
+    required TResult Function(_SetUserName value) setUserName,
+    required TResult Function(_EnDefinition value) getEnDefinition,
+  }) {
+    return setUserName(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_RandomUser value)? randomUser,
+    TResult? Function(_GetStoredUserName value)? getStoredUserName,
+    TResult? Function(_SetUserName value)? setUserName,
+    TResult? Function(_EnDefinition value)? getEnDefinition,
+  }) {
+    return setUserName?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_RandomUser value)? randomUser,
+    TResult Function(_GetStoredUserName value)? getStoredUserName,
+    TResult Function(_SetUserName value)? setUserName,
+    TResult Function(_EnDefinition value)? getEnDefinition,
+    required TResult orElse(),
+  }) {
+    if (setUserName != null) {
+      return setUserName(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SetUserName implements HomeEvent {
+  const factory _SetUserName(final String name) = _$_SetUserName;
+
+  String get name;
+  @JsonKey(ignore: true)
+  _$$_SetUserNameCopyWith<_$_SetUserName> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -359,8 +522,9 @@ class _$_EnDefinition implements _EnDefinition {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() randomEmoji,
     required TResult Function() randomUser,
+    required TResult Function() getStoredUserName,
+    required TResult Function(String name) setUserName,
     required TResult Function(String word) getEnDefinition,
   }) {
     return getEnDefinition(word);
@@ -369,8 +533,9 @@ class _$_EnDefinition implements _EnDefinition {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? randomEmoji,
     TResult? Function()? randomUser,
+    TResult? Function()? getStoredUserName,
+    TResult? Function(String name)? setUserName,
     TResult? Function(String word)? getEnDefinition,
   }) {
     return getEnDefinition?.call(word);
@@ -379,8 +544,9 @@ class _$_EnDefinition implements _EnDefinition {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? randomEmoji,
     TResult Function()? randomUser,
+    TResult Function()? getStoredUserName,
+    TResult Function(String name)? setUserName,
     TResult Function(String word)? getEnDefinition,
     required TResult orElse(),
   }) {
@@ -393,8 +559,9 @@ class _$_EnDefinition implements _EnDefinition {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_RandomEmoji value) randomEmoji,
     required TResult Function(_RandomUser value) randomUser,
+    required TResult Function(_GetStoredUserName value) getStoredUserName,
+    required TResult Function(_SetUserName value) setUserName,
     required TResult Function(_EnDefinition value) getEnDefinition,
   }) {
     return getEnDefinition(this);
@@ -403,8 +570,9 @@ class _$_EnDefinition implements _EnDefinition {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RandomEmoji value)? randomEmoji,
     TResult? Function(_RandomUser value)? randomUser,
+    TResult? Function(_GetStoredUserName value)? getStoredUserName,
+    TResult? Function(_SetUserName value)? setUserName,
     TResult? Function(_EnDefinition value)? getEnDefinition,
   }) {
     return getEnDefinition?.call(this);
@@ -413,8 +581,9 @@ class _$_EnDefinition implements _EnDefinition {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RandomEmoji value)? randomEmoji,
     TResult Function(_RandomUser value)? randomUser,
+    TResult Function(_GetStoredUserName value)? getStoredUserName,
+    TResult Function(_SetUserName value)? setUserName,
     TResult Function(_EnDefinition value)? getEnDefinition,
     required TResult orElse(),
   }) {
@@ -440,9 +609,10 @@ mixin _$HomeState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(DefinitionEntity enDefinitionEntity) appALoaded,
-    required TResult Function(EmojiEntity emojiEntity) appBLoaded,
-    required TResult Function(UserEntity userEntity) appCLoaded,
+    required TResult Function(List<DefinitionEntity> enDefinitionEntities)
+        appALoaded,
+    required TResult Function(UserEntity userEntity) appBLoaded,
+    required TResult Function(String userName) appCLoaded,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -450,9 +620,9 @@ mixin _$HomeState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult? Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult? Function(UserEntity userEntity)? appCLoaded,
+    TResult? Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult? Function(UserEntity userEntity)? appBLoaded,
+    TResult? Function(String userName)? appCLoaded,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -460,9 +630,9 @@ mixin _$HomeState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult Function(UserEntity userEntity)? appCLoaded,
+    TResult Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult Function(UserEntity userEntity)? appBLoaded,
+    TResult Function(String userName)? appCLoaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -557,9 +727,10 @@ class _$HomeInitial implements HomeInitial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(DefinitionEntity enDefinitionEntity) appALoaded,
-    required TResult Function(EmojiEntity emojiEntity) appBLoaded,
-    required TResult Function(UserEntity userEntity) appCLoaded,
+    required TResult Function(List<DefinitionEntity> enDefinitionEntities)
+        appALoaded,
+    required TResult Function(UserEntity userEntity) appBLoaded,
+    required TResult Function(String userName) appCLoaded,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -570,9 +741,9 @@ class _$HomeInitial implements HomeInitial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult? Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult? Function(UserEntity userEntity)? appCLoaded,
+    TResult? Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult? Function(UserEntity userEntity)? appBLoaded,
+    TResult? Function(String userName)? appCLoaded,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -583,9 +754,9 @@ class _$HomeInitial implements HomeInitial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult Function(UserEntity userEntity)? appCLoaded,
+    TResult Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult Function(UserEntity userEntity)? appBLoaded,
+    TResult Function(String userName)? appCLoaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -683,9 +854,10 @@ class _$HomeLoading implements HomeLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(DefinitionEntity enDefinitionEntity) appALoaded,
-    required TResult Function(EmojiEntity emojiEntity) appBLoaded,
-    required TResult Function(UserEntity userEntity) appCLoaded,
+    required TResult Function(List<DefinitionEntity> enDefinitionEntities)
+        appALoaded,
+    required TResult Function(UserEntity userEntity) appBLoaded,
+    required TResult Function(String userName) appCLoaded,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -696,9 +868,9 @@ class _$HomeLoading implements HomeLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult? Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult? Function(UserEntity userEntity)? appCLoaded,
+    TResult? Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult? Function(UserEntity userEntity)? appBLoaded,
+    TResult? Function(String userName)? appCLoaded,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -709,9 +881,9 @@ class _$HomeLoading implements HomeLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult Function(UserEntity userEntity)? appCLoaded,
+    TResult Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult Function(UserEntity userEntity)? appBLoaded,
+    TResult Function(String userName)? appCLoaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -775,9 +947,7 @@ abstract class _$$HomeALoadedCopyWith<$Res> {
           _$HomeALoaded value, $Res Function(_$HomeALoaded) then) =
       __$$HomeALoadedCopyWithImpl<$Res>;
   @useResult
-  $Res call({DefinitionEntity enDefinitionEntity});
-
-  $DefinitionEntityCopyWith<$Res> get enDefinitionEntity;
+  $Res call({List<DefinitionEntity> enDefinitionEntities});
 }
 
 /// @nodoc
@@ -791,36 +961,36 @@ class __$$HomeALoadedCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? enDefinitionEntity = null,
+    Object? enDefinitionEntities = null,
   }) {
     return _then(_$HomeALoaded(
-      enDefinitionEntity: null == enDefinitionEntity
-          ? _value.enDefinitionEntity
-          : enDefinitionEntity // ignore: cast_nullable_to_non_nullable
-              as DefinitionEntity,
+      enDefinitionEntities: null == enDefinitionEntities
+          ? _value._enDefinitionEntities
+          : enDefinitionEntities // ignore: cast_nullable_to_non_nullable
+              as List<DefinitionEntity>,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DefinitionEntityCopyWith<$Res> get enDefinitionEntity {
-    return $DefinitionEntityCopyWith<$Res>(_value.enDefinitionEntity, (value) {
-      return _then(_value.copyWith(enDefinitionEntity: value));
-    });
   }
 }
 
 /// @nodoc
 
 class _$HomeALoaded implements HomeALoaded {
-  const _$HomeALoaded({required this.enDefinitionEntity});
+  const _$HomeALoaded(
+      {required final List<DefinitionEntity> enDefinitionEntities})
+      : _enDefinitionEntities = enDefinitionEntities;
 
+  final List<DefinitionEntity> _enDefinitionEntities;
   @override
-  final DefinitionEntity enDefinitionEntity;
+  List<DefinitionEntity> get enDefinitionEntities {
+    if (_enDefinitionEntities is EqualUnmodifiableListView)
+      return _enDefinitionEntities;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_enDefinitionEntities);
+  }
 
   @override
   String toString() {
-    return 'HomeState.appALoaded(enDefinitionEntity: $enDefinitionEntity)';
+    return 'HomeState.appALoaded(enDefinitionEntities: $enDefinitionEntities)';
   }
 
   @override
@@ -828,12 +998,13 @@ class _$HomeALoaded implements HomeALoaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HomeALoaded &&
-            (identical(other.enDefinitionEntity, enDefinitionEntity) ||
-                other.enDefinitionEntity == enDefinitionEntity));
+            const DeepCollectionEquality()
+                .equals(other._enDefinitionEntities, _enDefinitionEntities));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, enDefinitionEntity);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_enDefinitionEntities));
 
   @JsonKey(ignore: true)
   @override
@@ -846,12 +1017,13 @@ class _$HomeALoaded implements HomeALoaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(DefinitionEntity enDefinitionEntity) appALoaded,
-    required TResult Function(EmojiEntity emojiEntity) appBLoaded,
-    required TResult Function(UserEntity userEntity) appCLoaded,
+    required TResult Function(List<DefinitionEntity> enDefinitionEntities)
+        appALoaded,
+    required TResult Function(UserEntity userEntity) appBLoaded,
+    required TResult Function(String userName) appCLoaded,
     required TResult Function(String message) error,
   }) {
-    return appALoaded(enDefinitionEntity);
+    return appALoaded(enDefinitionEntities);
   }
 
   @override
@@ -859,12 +1031,12 @@ class _$HomeALoaded implements HomeALoaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult? Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult? Function(UserEntity userEntity)? appCLoaded,
+    TResult? Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult? Function(UserEntity userEntity)? appBLoaded,
+    TResult? Function(String userName)? appCLoaded,
     TResult? Function(String message)? error,
   }) {
-    return appALoaded?.call(enDefinitionEntity);
+    return appALoaded?.call(enDefinitionEntities);
   }
 
   @override
@@ -872,14 +1044,14 @@ class _$HomeALoaded implements HomeALoaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult Function(UserEntity userEntity)? appCLoaded,
+    TResult Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult Function(UserEntity userEntity)? appBLoaded,
+    TResult Function(String userName)? appCLoaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (appALoaded != null) {
-      return appALoaded(enDefinitionEntity);
+      return appALoaded(enDefinitionEntities);
     }
     return orElse();
   }
@@ -930,9 +1102,10 @@ class _$HomeALoaded implements HomeALoaded {
 
 abstract class HomeALoaded implements HomeState {
   const factory HomeALoaded(
-      {required final DefinitionEntity enDefinitionEntity}) = _$HomeALoaded;
+          {required final List<DefinitionEntity> enDefinitionEntities}) =
+      _$HomeALoaded;
 
-  DefinitionEntity get enDefinitionEntity;
+  List<DefinitionEntity> get enDefinitionEntities;
   @JsonKey(ignore: true)
   _$$HomeALoadedCopyWith<_$HomeALoaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -944,9 +1117,9 @@ abstract class _$$HomeBLoadedCopyWith<$Res> {
           _$HomeBLoaded value, $Res Function(_$HomeBLoaded) then) =
       __$$HomeBLoadedCopyWithImpl<$Res>;
   @useResult
-  $Res call({EmojiEntity emojiEntity});
+  $Res call({UserEntity userEntity});
 
-  $EmojiEntityCopyWith<$Res> get emojiEntity;
+  $UserEntityCopyWith<$Res> get userEntity;
 }
 
 /// @nodoc
@@ -960,21 +1133,21 @@ class __$$HomeBLoadedCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? emojiEntity = null,
+    Object? userEntity = null,
   }) {
     return _then(_$HomeBLoaded(
-      emojiEntity: null == emojiEntity
-          ? _value.emojiEntity
-          : emojiEntity // ignore: cast_nullable_to_non_nullable
-              as EmojiEntity,
+      userEntity: null == userEntity
+          ? _value.userEntity
+          : userEntity // ignore: cast_nullable_to_non_nullable
+              as UserEntity,
     ));
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $EmojiEntityCopyWith<$Res> get emojiEntity {
-    return $EmojiEntityCopyWith<$Res>(_value.emojiEntity, (value) {
-      return _then(_value.copyWith(emojiEntity: value));
+  $UserEntityCopyWith<$Res> get userEntity {
+    return $UserEntityCopyWith<$Res>(_value.userEntity, (value) {
+      return _then(_value.copyWith(userEntity: value));
     });
   }
 }
@@ -982,14 +1155,14 @@ class __$$HomeBLoadedCopyWithImpl<$Res>
 /// @nodoc
 
 class _$HomeBLoaded implements HomeBLoaded {
-  const _$HomeBLoaded({required this.emojiEntity});
+  const _$HomeBLoaded({required this.userEntity});
 
   @override
-  final EmojiEntity emojiEntity;
+  final UserEntity userEntity;
 
   @override
   String toString() {
-    return 'HomeState.appBLoaded(emojiEntity: $emojiEntity)';
+    return 'HomeState.appBLoaded(userEntity: $userEntity)';
   }
 
   @override
@@ -997,12 +1170,12 @@ class _$HomeBLoaded implements HomeBLoaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HomeBLoaded &&
-            (identical(other.emojiEntity, emojiEntity) ||
-                other.emojiEntity == emojiEntity));
+            (identical(other.userEntity, userEntity) ||
+                other.userEntity == userEntity));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, emojiEntity);
+  int get hashCode => Object.hash(runtimeType, userEntity);
 
   @JsonKey(ignore: true)
   @override
@@ -1015,12 +1188,13 @@ class _$HomeBLoaded implements HomeBLoaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(DefinitionEntity enDefinitionEntity) appALoaded,
-    required TResult Function(EmojiEntity emojiEntity) appBLoaded,
-    required TResult Function(UserEntity userEntity) appCLoaded,
+    required TResult Function(List<DefinitionEntity> enDefinitionEntities)
+        appALoaded,
+    required TResult Function(UserEntity userEntity) appBLoaded,
+    required TResult Function(String userName) appCLoaded,
     required TResult Function(String message) error,
   }) {
-    return appBLoaded(emojiEntity);
+    return appBLoaded(userEntity);
   }
 
   @override
@@ -1028,12 +1202,12 @@ class _$HomeBLoaded implements HomeBLoaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult? Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult? Function(UserEntity userEntity)? appCLoaded,
+    TResult? Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult? Function(UserEntity userEntity)? appBLoaded,
+    TResult? Function(String userName)? appCLoaded,
     TResult? Function(String message)? error,
   }) {
-    return appBLoaded?.call(emojiEntity);
+    return appBLoaded?.call(userEntity);
   }
 
   @override
@@ -1041,14 +1215,14 @@ class _$HomeBLoaded implements HomeBLoaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult Function(UserEntity userEntity)? appCLoaded,
+    TResult Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult Function(UserEntity userEntity)? appBLoaded,
+    TResult Function(String userName)? appCLoaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (appBLoaded != null) {
-      return appBLoaded(emojiEntity);
+      return appBLoaded(userEntity);
     }
     return orElse();
   }
@@ -1098,10 +1272,10 @@ class _$HomeBLoaded implements HomeBLoaded {
 }
 
 abstract class HomeBLoaded implements HomeState {
-  const factory HomeBLoaded({required final EmojiEntity emojiEntity}) =
+  const factory HomeBLoaded({required final UserEntity userEntity}) =
       _$HomeBLoaded;
 
-  EmojiEntity get emojiEntity;
+  UserEntity get userEntity;
   @JsonKey(ignore: true)
   _$$HomeBLoadedCopyWith<_$HomeBLoaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1113,9 +1287,7 @@ abstract class _$$HomeCLoadedCopyWith<$Res> {
           _$HomeCLoaded value, $Res Function(_$HomeCLoaded) then) =
       __$$HomeCLoadedCopyWithImpl<$Res>;
   @useResult
-  $Res call({UserEntity userEntity});
-
-  $UserEntityCopyWith<$Res> get userEntity;
+  $Res call({String userName});
 }
 
 /// @nodoc
@@ -1129,36 +1301,28 @@ class __$$HomeCLoadedCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userEntity = null,
+    Object? userName = null,
   }) {
     return _then(_$HomeCLoaded(
-      userEntity: null == userEntity
-          ? _value.userEntity
-          : userEntity // ignore: cast_nullable_to_non_nullable
-              as UserEntity,
+      userName: null == userName
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UserEntityCopyWith<$Res> get userEntity {
-    return $UserEntityCopyWith<$Res>(_value.userEntity, (value) {
-      return _then(_value.copyWith(userEntity: value));
-    });
   }
 }
 
 /// @nodoc
 
 class _$HomeCLoaded implements HomeCLoaded {
-  const _$HomeCLoaded({required this.userEntity});
+  const _$HomeCLoaded({required this.userName});
 
   @override
-  final UserEntity userEntity;
+  final String userName;
 
   @override
   String toString() {
-    return 'HomeState.appCLoaded(userEntity: $userEntity)';
+    return 'HomeState.appCLoaded(userName: $userName)';
   }
 
   @override
@@ -1166,12 +1330,12 @@ class _$HomeCLoaded implements HomeCLoaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HomeCLoaded &&
-            (identical(other.userEntity, userEntity) ||
-                other.userEntity == userEntity));
+            (identical(other.userName, userName) ||
+                other.userName == userName));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, userEntity);
+  int get hashCode => Object.hash(runtimeType, userName);
 
   @JsonKey(ignore: true)
   @override
@@ -1184,12 +1348,13 @@ class _$HomeCLoaded implements HomeCLoaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(DefinitionEntity enDefinitionEntity) appALoaded,
-    required TResult Function(EmojiEntity emojiEntity) appBLoaded,
-    required TResult Function(UserEntity userEntity) appCLoaded,
+    required TResult Function(List<DefinitionEntity> enDefinitionEntities)
+        appALoaded,
+    required TResult Function(UserEntity userEntity) appBLoaded,
+    required TResult Function(String userName) appCLoaded,
     required TResult Function(String message) error,
   }) {
-    return appCLoaded(userEntity);
+    return appCLoaded(userName);
   }
 
   @override
@@ -1197,12 +1362,12 @@ class _$HomeCLoaded implements HomeCLoaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult? Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult? Function(UserEntity userEntity)? appCLoaded,
+    TResult? Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult? Function(UserEntity userEntity)? appBLoaded,
+    TResult? Function(String userName)? appCLoaded,
     TResult? Function(String message)? error,
   }) {
-    return appCLoaded?.call(userEntity);
+    return appCLoaded?.call(userName);
   }
 
   @override
@@ -1210,14 +1375,14 @@ class _$HomeCLoaded implements HomeCLoaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult Function(UserEntity userEntity)? appCLoaded,
+    TResult Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult Function(UserEntity userEntity)? appBLoaded,
+    TResult Function(String userName)? appCLoaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (appCLoaded != null) {
-      return appCLoaded(userEntity);
+      return appCLoaded(userName);
     }
     return orElse();
   }
@@ -1267,10 +1432,9 @@ class _$HomeCLoaded implements HomeCLoaded {
 }
 
 abstract class HomeCLoaded implements HomeState {
-  const factory HomeCLoaded({required final UserEntity userEntity}) =
-      _$HomeCLoaded;
+  const factory HomeCLoaded({required final String userName}) = _$HomeCLoaded;
 
-  UserEntity get userEntity;
+  String get userName;
   @JsonKey(ignore: true)
   _$$HomeCLoadedCopyWith<_$HomeCLoaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1342,9 +1506,10 @@ class _$HomeError implements HomeError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(DefinitionEntity enDefinitionEntity) appALoaded,
-    required TResult Function(EmojiEntity emojiEntity) appBLoaded,
-    required TResult Function(UserEntity userEntity) appCLoaded,
+    required TResult Function(List<DefinitionEntity> enDefinitionEntities)
+        appALoaded,
+    required TResult Function(UserEntity userEntity) appBLoaded,
+    required TResult Function(String userName) appCLoaded,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -1355,9 +1520,9 @@ class _$HomeError implements HomeError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult? Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult? Function(UserEntity userEntity)? appCLoaded,
+    TResult? Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult? Function(UserEntity userEntity)? appBLoaded,
+    TResult? Function(String userName)? appCLoaded,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -1368,9 +1533,9 @@ class _$HomeError implements HomeError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(DefinitionEntity enDefinitionEntity)? appALoaded,
-    TResult Function(EmojiEntity emojiEntity)? appBLoaded,
-    TResult Function(UserEntity userEntity)? appCLoaded,
+    TResult Function(List<DefinitionEntity> enDefinitionEntities)? appALoaded,
+    TResult Function(UserEntity userEntity)? appBLoaded,
+    TResult Function(String userName)? appCLoaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {

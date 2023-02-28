@@ -10,7 +10,7 @@ DefinitionModel _$DefinitionModelFromJson(Map<String, dynamic> json) =>
     DefinitionModel(
       json['word'] as String,
       json['phonetic'] as String,
-      json['origin'] as String,
+      json['origin'] as String?,
     );
 
 Map<String, dynamic> _$DefinitionModelToJson(DefinitionModel instance) =>

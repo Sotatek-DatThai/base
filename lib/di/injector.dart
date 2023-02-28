@@ -7,6 +7,6 @@ final getIt = GetIt.instance;
 @InjectableInit()
 Future<void> configureDependencies(String env) => getIt.init(environment: env);
 
-const envA = Environment('A');
-const envB = Environment('B');
-const envC = Environment('C');
+const flavorA = Environment('A');
+const flavorB = Environment('B');
+const flavorC = Environment('C');

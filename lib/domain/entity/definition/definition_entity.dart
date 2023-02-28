@@ -8,6 +8,6 @@ class DefinitionEntity with _$DefinitionEntity {
   const factory DefinitionEntity({
     required String word,
     required String phonetic,
-    required String origin,
+    required String? origin,
   }) = _DefinitionEntity;
 }

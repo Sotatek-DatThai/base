@@ -11,6 +11,6 @@ abstract class UserApi {
   @factoryMethod
   factory UserApi(Dio dio, {@Named('user_url') String baseUrl}) = _UserApi;
 
-  @GET("/random_user")
+  @GET("/users")
   Future<UserModel> random();
 }

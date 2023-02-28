@@ -4,13 +4,13 @@ import 'package:sa_base/domain/failure/failure.dart';
 import 'package:sa_base/domain/repository/dictionary_repository.dart';
 import 'package:sa_base/domain/usecase/usecase.dart';
 
-class GetEnDefinitionUseCase extends UseCaseAsync<String, DefinitionEntity> {
+class GetEnDefinitionUseCase extends UseCaseAsync<String, List<DefinitionEntity>> {
   final DictionaryRepository _dictionaryRepository;
 
   GetEnDefinitionUseCase(this._dictionaryRepository);
 
   @override
-  Future<Either<Failure, DefinitionEntity>> call(String params) {
+  Future<Either<Failure, List<DefinitionEntity>>> call(String params) {
     return _dictionaryRepository.enDefinitionOf(params);
   }
 }

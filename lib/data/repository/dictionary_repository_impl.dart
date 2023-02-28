@@ -13,10 +13,10 @@ class DictionaryRepositoryImpl extends DictionaryRepository {
   DictionaryRepositoryImpl(this._dictionaryApi);
 
   @override
-  Future<Either<Failure, DefinitionEntity>> enDefinitionOf(String word) async {
+  Future<Either<Failure, List<DefinitionEntity>>> enDefinitionOf(String word) async {
     try {
-      final model = await _dictionaryApi.enDifinitionOf(word);
-      return Right(model.toEntity());
+      final list = await _dictionaryApi.enDefinitionOf(word);
+      return Right(list.map((e) => e.toEntity()).toList());
     } catch (e) {
       return Left(FailureMessage('$e'));
     }

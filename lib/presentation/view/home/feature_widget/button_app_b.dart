@@ -12,25 +12,18 @@ class ButtonAppB extends StatelessWidget {
       builder: (context, state) {
         return Column(
           children: [
-            if (state is HomeBLoaded)
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: state.emojiEntity.unicode
-                    .map((e) => Flexible(
-                          child: Padding(
-                            padding: const EdgeInsets.only(right: 8.0),
-                            child: Text(e),
-                          ),
-                        ))
-                    .toList(),
-              ),
+            if (state is HomeBLoaded) ...[
+              Text(state.userEntity.firstName),
+              Image.network(state.userEntity.avatar),
+            ],
+            if (state is HomeError) Text(state.message),
             state is HomeLoading
                 ? const LoadingIcon()
                 : ElevatedButton(
                     onPressed: () {
-                      context.read<HomeBloc>().add(const HomeEvent.randomEmoji());
+                      context.read<HomeBloc>().add(const HomeEvent.randomUser());
                     },
-                    child: const Text('Press Me'),
+                    child: const Text('Get random user'),
                   ),
           ],
         );

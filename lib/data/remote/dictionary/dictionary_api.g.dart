@@ -19,13 +19,13 @@ class _DictionaryApi implements DictionaryApi {
   String? baseUrl;
 
   @override
-  Future<DefinitionModel> enDifinitionOf(word) async {
+  Future<List<DefinitionModel>> enDefinitionOf(word) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<DefinitionModel>(Options(
+        .fetch<List<dynamic>>(_setStreamType<List<DefinitionModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -37,7 +37,9 @@ class _DictionaryApi implements DictionaryApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = DefinitionModel.fromJson(_result.data!);
+    var value = _result.data!
+        .map((dynamic i) => DefinitionModel.fromJson(i as Map<String, dynamic>))
+        .toList();
     return value;
   }
 

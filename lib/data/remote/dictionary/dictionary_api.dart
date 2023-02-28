@@ -12,5 +12,5 @@ abstract class DictionaryApi {
   factory DictionaryApi(Dio dio, {@Named('dictionary_url') String baseUrl}) = _DictionaryApi;
 
   @GET("/entries/en/{word}")
-  Future<DefinitionModel> enDifinitionOf(@Path('word') String word);
+  Future<List<DefinitionModel>> enDefinitionOf(@Path('word') String word);
 }

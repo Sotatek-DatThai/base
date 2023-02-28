@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$DefinitionEntity {
   String get word => throw _privateConstructorUsedError;
   String get phonetic => throw _privateConstructorUsedError;
-  String get origin => throw _privateConstructorUsedError;
+  String? get origin => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DefinitionEntityCopyWith<DefinitionEntity> get copyWith =>
@@ -31,7 +31,7 @@ abstract class $DefinitionEntityCopyWith<$Res> {
           DefinitionEntity value, $Res Function(DefinitionEntity) then) =
       _$DefinitionEntityCopyWithImpl<$Res, DefinitionEntity>;
   @useResult
-  $Res call({String word, String phonetic, String origin});
+  $Res call({String word, String phonetic, String? origin});
 }
 
 /// @nodoc
@@ -49,7 +49,7 @@ class _$DefinitionEntityCopyWithImpl<$Res, $Val extends DefinitionEntity>
   $Res call({
     Object? word = null,
     Object? phonetic = null,
-    Object? origin = null,
+    Object? origin = freezed,
   }) {
     return _then(_value.copyWith(
       word: null == word
@@ -60,10 +60,10 @@ class _$DefinitionEntityCopyWithImpl<$Res, $Val extends DefinitionEntity>
           ? _value.phonetic
           : phonetic // ignore: cast_nullable_to_non_nullable
               as String,
-      origin: null == origin
+      origin: freezed == origin
           ? _value.origin
           : origin // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -76,7 +76,7 @@ abstract class _$$_DefinitionEntityCopyWith<$Res>
       __$$_DefinitionEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String word, String phonetic, String origin});
+  $Res call({String word, String phonetic, String? origin});
 }
 
 /// @nodoc
@@ -92,7 +92,7 @@ class __$$_DefinitionEntityCopyWithImpl<$Res>
   $Res call({
     Object? word = null,
     Object? phonetic = null,
-    Object? origin = null,
+    Object? origin = freezed,
   }) {
     return _then(_$_DefinitionEntity(
       word: null == word
@@ -103,10 +103,10 @@ class __$$_DefinitionEntityCopyWithImpl<$Res>
           ? _value.phonetic
           : phonetic // ignore: cast_nullable_to_non_nullable
               as String,
-      origin: null == origin
+      origin: freezed == origin
           ? _value.origin
           : origin // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -124,7 +124,7 @@ class _$_DefinitionEntity
   @override
   final String phonetic;
   @override
-  final String origin;
+  final String? origin;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -166,14 +166,14 @@ abstract class _DefinitionEntity implements DefinitionEntity {
   const factory _DefinitionEntity(
       {required final String word,
       required final String phonetic,
-      required final String origin}) = _$_DefinitionEntity;
+      required final String? origin}) = _$_DefinitionEntity;
 
   @override
   String get word;
   @override
   String get phonetic;
   @override
-  String get origin;
+  String? get origin;
   @override
   @JsonKey(ignore: true)
   _$$_DefinitionEntityCopyWith<_$_DefinitionEntity> get copyWith =>
