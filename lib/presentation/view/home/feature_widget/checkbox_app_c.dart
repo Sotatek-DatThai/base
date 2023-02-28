@@ -8,8 +8,8 @@ class CheckBoxAppC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<String> names = [
-      'Jeong Hoon Kimsa',
-      'Lim Jia Hao',
+      'Evan',
+      'Roxanne',
     ];
 
     return BlocBuilder<HomeBloc, HomeState>(

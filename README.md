@@ -1,6 +1,8 @@
 Base on Clean Architecture
 
-Each Flavor will have
+Each feature should be written into a totally separated widget and bloc.
+If one feature need to be hidden or deleted just set flag in lib/util/const/feature_control.dart
+and check that flag where that widget or function of that feature is used ex: checkbox_app_c.dart
 
 ```
 flutter pub run build_runner build --delete-conflicting-outputs

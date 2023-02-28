@@ -3,6 +3,7 @@ import 'package:sa_base/flavors.dart';
 import 'package:sa_base/presentation/view/home/feature_widget/button_app_b.dart';
 import 'package:sa_base/presentation/view/home/feature_widget/checkbox_app_c.dart';
 import 'package:sa_base/presentation/view/home/feature_widget/textfield_app_a.dart';
+import 'package:sa_base/util/const/feature_control.dart';
 
 class FeatureWidget extends StatelessWidget {
   const FeatureWidget({Key? key}) : super(key: key);
@@ -15,6 +16,9 @@ class FeatureWidget extends StatelessWidget {
       case Flavor.B:
         return const ButtonAppB();
       case Flavor.C:
+        if(!FeatureControl.enableSetUserName){
+          return const SizedBox();
+        }
         return const CheckBoxAppC();
     }
   }
