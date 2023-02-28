@@ -1,16 +1,29 @@
-# sa_base
 
-A new Flutter project.
+```
+flutter pub run build_runner build --delete-conflicting-outputs
 
-## Getting Started
+flutter pub run build_runner watch --delete-conflicting-outputs
 
-This project is a starting point for a Flutter application.
+spider build
 
-A few resources to get you started if this is your first Flutter project:
+xcrun simctl erase all
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+
+flutter clean
+rm -Rf ios/Pods
+rm -Rf ios/Podfile.lock
+rm -Rf ios/.symlinks
+rm -Rf ios/Flutter/Flutter.framework
+rm -Rf ios/Flutter/Flutter.podspec
+cd ios/
+pod deintegrate
+flutter pub get
+pod install --repo-update
+
+rm -rf ~/Library/Developer/Xcode/DerivedData
+rm -rf ~/Library/Developer/Xcode/iOS DeviceSupport
+
+```
